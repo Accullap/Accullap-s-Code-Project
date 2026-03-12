@@ -382,11 +382,7 @@ hangman_stages = [
 
 randomword = random.choice(words)
 print("\n" + randomword)
-
-
-def letters_in_randomword():
-    randomword_contains = set(randomword)
-    print(randomword_contains)
+letters_in_randomword = set(randomword)
 
 
 def userinput():
@@ -407,6 +403,6 @@ def userinput():
             guessed_letters.append(letter)
 
 
-print(letters_in_randomword)
-# print(hangman_stages[0])
+letters_in_randomword()
+print(hangman_stages[0])
 print(set(randomword))
