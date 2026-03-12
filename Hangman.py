@@ -384,6 +384,11 @@ randomword = random.choice(words)
 print("\n" + randomword)
 
 
+def letters_in_randomword():
+    randomword_contains = set(randomword)
+    print(randomword_contains)
+
+
 def userinput():
     display = '_ ' * len(randomword)
     guessed_letters = []  # creates a list of guessed letters
@@ -401,9 +406,7 @@ def userinput():
         else:
             guessed_letters.append(letter)
 
-        if input() in randomword:
-            print("GO")
 
-
-print(hangman_stages[0])
-userinput()
+print(letters_in_randomword)
+# print(hangman_stages[0])
+print(set(randomword))
