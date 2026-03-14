@@ -382,6 +382,7 @@ hangman_stages = [
 
 randomword = random.choice(words)
 print("\n" + randomword)
+# makes a list containing each letter of the random word
 letters_in_randomword = set(randomword)
 
 
@@ -396,13 +397,17 @@ def userinput():
         letter = input("\nGuess a letter: ").lower()
 
         if not letter.isalpha():
-            print("Only letters allowed!")
+            print("\nOnly letters allowed!")
         elif letter in guessed_letters:
-            print("Letter already used!")
+            print("\nLetter already used!")
         else:
             guessed_letters.append(letter)
+            if letter in letters_in_randomword:
+                print("\nCorrect Guess!")
+            else:
+                print(f"\nused: {str(guessed_letters)}")
 
 
-letters_in_randomword()
+userinput()
 print(hangman_stages[0])
 print(set(randomword))
