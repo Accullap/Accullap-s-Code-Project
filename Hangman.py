@@ -393,7 +393,7 @@ def userinput():
     max_wrong = len(hangman_stages) - 1
     n = 1
     print("\n" + display)
-    while True:
+    while n < 7:
         letter = input("\nGuess a letter: ").lower()
 
         if not letter.isalpha():
@@ -403,11 +403,20 @@ def userinput():
         else:
             guessed_letters.append(letter)
             if letter in letters_in_randomword:
-                print("\nCorrect Guess!")
+                print(display)
+                print(f"\nused: {str(guessed_letters)}")
             else:
                 print(hangman_stages[n])
                 print(f"\nused: {str(guessed_letters)}")
                 n += 1
+
+    print("""   
+        L
+            O
+                S
+                    T
+                        !
+                    """)
 
 
 userinput()
