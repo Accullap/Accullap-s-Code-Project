@@ -411,11 +411,11 @@ def userinput():
                 n += 1
 
     print("""   
-        L
-            O
+        L               L    
+            O       O
                 S
-                    T
-                        !
+            T       T
+        !                !
                     """)
 
 
