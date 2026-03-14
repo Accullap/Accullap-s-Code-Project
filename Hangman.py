@@ -391,7 +391,7 @@ def userinput():
     guessed_letters = []  # creates a list of guessed letters
     # max_wrong needs to be number 6 on the list, but because lists start with index 0 and length with index 1 total length of hangman_stages needs to be -1 to get to 6.
     max_wrong = len(hangman_stages) - 1
-
+    n = 1
     print("\n" + display)
     while True:
         letter = input("\nGuess a letter: ").lower()
@@ -405,9 +405,9 @@ def userinput():
             if letter in letters_in_randomword:
                 print("\nCorrect Guess!")
             else:
+                print(hangman_stages[n])
                 print(f"\nused: {str(guessed_letters)}")
+                n += 1
 
 
 userinput()
-print(hangman_stages[0])
-print(set(randomword))
