@@ -400,7 +400,7 @@ def userinput():
             print("\nOnly letters allowed!")
         elif letter in guessed_letters:
             print("\nLetter already used!")
-        elif len(letter) > 1:
+        elif len(letter) != 1:
             print("\nOnly one letter allowed!")
         else:
             guessed_letters.append(letter)
