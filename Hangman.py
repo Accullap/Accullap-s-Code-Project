@@ -381,7 +381,7 @@ hangman_stages = [
 ]
 
 randomword = random.choice(words)
-print("\n" + randomword)
+# print("\n" + randomword)
 # makes a list containing each letter of the random word
 letters_in_randomword = set(randomword)
 
@@ -393,23 +393,38 @@ def userinput():
     max_wrong = len(hangman_stages) - 1
     n = 1
     print("\n" + display)
-    while n < 7:
+    while n <= max_wrong:
         letter = input("\nGuess a letter: ").lower()
 
         if not letter.isalpha():
             print("\nOnly letters allowed!")
         elif letter in guessed_letters:
             print("\nLetter already used!")
+        elif len(letter) > 1:
+            print("\nOnly one letter allowed!")
         else:
             guessed_letters.append(letter)
             if letter in letters_in_randomword:
+                display = ""
+                for char in randomword:
+                    if char in guessed_letters:
+                        display += char + " "
+                    else:
+                        display += "_ "
+                print("")
                 print(display)
-                print(f"\nused: {str(guessed_letters)}")
+                print(f"\nused: {str(sorted(guessed_letters))}")
+                if "_ " not in display:
+                    print("\nYOU WIN!\n")
+                    print(f"The Word was: {str(randomword)}\n")
+                    return
+
             else:
                 print(hangman_stages[n])
-                print(f"\nused: {str(guessed_letters)}")
+                print(" ")
+                print(display)
+                print(f"\nused: {str(sorted(guessed_letters))}")
                 n += 1
-
     print("""   
         L               L    
             O       O
@@ -417,6 +432,7 @@ def userinput():
             T       T
         !                !
                     """)
+    print(f"The Word was: {str(randomword)}\n")
 
 
 userinput()
