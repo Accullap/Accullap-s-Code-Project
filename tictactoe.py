@@ -15,4 +15,29 @@ def check(player):
             (2, 4, 6), (0, 3, 6), (1, 4, 7), (2, 5, 8)]
 
 
-show()
+play_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+
+def play():
+    while True:
+        try:
+            number = int(input("Give me a number: "))
+            if number < 10:
+                if number <= 3:
+                    x = 0
+                elif number > 3 and number <= 6:
+                    x = 1
+                else:
+                    x = 2
+
+                y = (number - 1) % 3
+
+                print(f"number vertical: {x}")
+                print(f"number horizontal: {y}")
+            else:
+                print("only numbers from 1-9")
+        except:
+            print("only numbers allowed")
+
+
+play()
