@@ -1,0 +1,7 @@
+print(" ")
+celsius = float(input("Enter temperature in Celsius: \n"))
+print(" ")
+print(str(celsius) + " °C")
+print("↓")
+print(str((celsius * 9/5) + 32) + " °F")
+print(" ")
