@@ -18,7 +18,7 @@ def check(player):
 play_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
 
-def play():
+def play():     # grid tictactoe 1,2,3,4,5,6,7,8,9;     with vertical and horizontal
     while True:
         try:
             number = int(input("Give me a number: "))
