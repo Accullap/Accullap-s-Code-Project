@@ -9,10 +9,21 @@ def show():
         if i < 6:
             print("---+---+---")
 
+def player1():
+    w
+
+
+def player2():
+    w
+
+# either player 1 and player 2 seperate config or only def player()
+
 
 def check(player):
     wins = [(0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 4, 8),
             (2, 4, 6), (0, 3, 6), (1, 4, 7), (2, 5, 8)]
+    # check only after player 1 has made 3 moves
+
 
 
 play_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
@@ -42,4 +53,3 @@ def play():     # grid tictactoe 1,2,3,4,5,6,7,8,9;     with vertical and horizo
 
 play()
 
-print("Test pc")
