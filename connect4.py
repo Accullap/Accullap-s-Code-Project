@@ -60,9 +60,27 @@ def checkHorizontal():
 
 def checkRow():
     global winner
-    if (board[0] == board[3] == board[6] and board[0] != "   ") or \
-       (board[1] == board[4] == board[7] and board[1] != "   ") or \
-       (board[2] == board[5] == board[8] and board[2] != "   "):
+    if (board[0] == board[7] == board[14] == board[21] and board[0] != "   ") or \
+        (board[7] == board[14] == board[21] == board[28] and board[7] != "   ") or \
+        (board[14] == board[21] == board[28] == board[35] and board[14] != "   ") or \
+        (board[1] == board[8] == board[15] == board[22] and board[1] != "   ") or \
+        (board[8] == board[15] == board[22] == board[29] and board[8] != "   ") or \
+        (board[15] == board[22] == board[29] == board[36] and board[15] != "   ") or \
+        (board[2] == board[9] == board[16] == board[23] and board[2] != "   ") or \
+        (board[9] == board[16] == board[23] == board[30] and board[9] != "   ") or \
+        (board[16] == board[23] == board[30] == board[37] and board[16] != "   ") or \
+        (board[3] == board[10] == board[17] == board[24] and board[3] != "   ") or \
+        (board[10] == board[17] == board[24] == board[31] and board[10] != "   ") or \
+        (board[17] == board[24] == board[31] == board[38] and board[17] != "   ") or \
+        (board[4] == board[11] == board[18] == board[25] and board[4] != "   ") or \
+        (board[11] == board[18] == board[25] == board[32] and board[11] != "   ") or \
+        (board[18] == board[25] == board[32] == board[39] and board[18] != "   ") or \
+        (board[5] == board[12] == board[19] == board[26] and board[5] != "   ") or \
+        (board[12] == board[19] == board[26] == board[33] and board[12] != "   ") or \
+        (board[19] == board[26] == board[33] == board[40] and board[19] != "   ") or \
+        (board[6] == board[13] == board[20] == board[27] and board[6] != "   ") or \
+        (board[13] == board[20] == board[27] == board[34] and board[13] != "   ") or \
+            (board[20] == board[27] == board[34] == board[41] and board[20] != "   "):
         winner = currentplayer
         return True
 
