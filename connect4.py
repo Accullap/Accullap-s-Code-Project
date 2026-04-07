@@ -44,7 +44,7 @@ def playerInput():
             else:
                 print("Oops! Try again!")
 
-# now comes inp == 2:
+                # now comes inp == 2:
             if inp == 2 and board[36] == "   ":
                 board[36] = currentplayer
                 break
@@ -66,44 +66,117 @@ def playerInput():
             else:
                 print("Oops! Try again!")
 
-# now comes inp == 3:
-            if inp == 1 and board[35] == "   ":
-                board[35] = currentplayer
+                # now comes inp == 3:
+            if inp == 3 and board[37] == "   ":
+                board[37] = currentplayer
                 break
-            elif inp == 1 and all(board[i] != "   " for i in [35]) and board[28] == "   ":
-                board[28] = currentplayer
+            elif inp == 3 and all(board[i] != "   " for i in [37]) and board[30] == "   ":
+                board[30] = currentplayer
                 break
-            elif inp == 1 and all(board[i] != "   " for i in [35, 28]) and board[21] == "   ":
-                board[21] = currentplayer
+            elif inp == 3 and all(board[i] != "   " for i in [37, 30]) and board[23] == "   ":
+                board[23] = currentplayer
                 break
-            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21]) and board[14] == "   ":
-                board[14] = currentplayer
+            elif inp == 3 and all(board[i] != "   " for i in [37, 30, 23]) and board[16] == "   ":
+                board[16] = currentplayer
                 break
-            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14]) and board[7] == "   ":
-                board[7] = currentplayer
+            elif inp == 3 and all(board[i] != "   " for i in [37, 30, 23, 16]) and board[9] == "   ":
+                board[9] = currentplayer
                 break
-            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14, 7]) and board[0] == "   ":
-                board[0] = currentplayer
+            elif inp == 3 and all(board[i] != "   " for i in [37, 30, 23, 16, 9]) and board[2] == "   ":
+                board[2] = currentplayer
                 break
             else:
                 print("Oops! Try again!")
 
+                # now comes inp == 4:
+            if inp == 4 and board[38] == "   ":
+                board[38] = currentplayer
+                break
+            elif inp == 4 and all(board[i] != "   " for i in [38]) and board[31] == "   ":
+                board[31] = currentplayer
+                break
+            elif inp == 4 and all(board[i] != "   " for i in [38, 31]) and board[24] == "   ":
+                board[24] = currentplayer
+                break
+            elif inp == 4 and all(board[i] != "   " for i in [38, 31, 24]) and board[17] == "   ":
+                board[17] = currentplayer
+                break
+            elif inp == 4 and all(board[i] != "   " for i in [38, 31, 24, 17]) and board[10] == "   ":
+                board[10] = currentplayer
+                break
+            elif inp == 4 and all(board[i] != "   " for i in [38, 31, 24, 17, 10]) and board[3] == "   ":
+                board[3] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
 
-# input needs to be 1-7 for every row, needs to take accout gravity, e.g. input 1 needs spot is then 35 and if input is 1 again then != 35but 28
-# def playerInput():
-#     while True:
-#         print()
-#         if currentplayer == " X ":
-#             inp = int(input(f"Enter a number 1-7 Player (X): "))
-#         else:
-#             inp = int(input(f"Enter a number 1-7 Player (O): "))
-#         print()
-#         if inp >= 1 and inp <= 7 and board[inp-1] == "   ":
-#             board[inp-1] = currentplayer
-#             break
-#         else:
-#             print("Oops! Try again!\n")
-#             printBoard()
+                # now comes inp == 5:
+            if inp == 5 and board[39] == "   ":
+                board[39] = currentplayer
+                break
+            elif inp == 5 and all(board[i] != "   " for i in [39]) and board[32] == "   ":
+                board[32] = currentplayer
+                break
+            elif inp == 5 and all(board[i] != "   " for i in [39, 32]) and board[25] == "   ":
+                board[25] = currentplayer
+                break
+            elif inp == 5 and all(board[i] != "   " for i in [39, 32, 25]) and board[18] == "   ":
+                board[18] = currentplayer
+                break
+            elif inp == 5 and all(board[i] != "   " for i in [39, 32, 25, 18]) and board[11] == "   ":
+                board[11] = currentplayer
+                break
+            elif inp == 5 and all(board[i] != "   " for i in [39, 32, 25, 18, 11]) and board[4] == "   ":
+                board[4] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+
+                # now comes inp == 6:
+            if inp == 6 and board[40] == "   ":
+                board[40] = currentplayer
+                break
+            elif inp == 6 and all(board[i] != "   " for i in [40]) and board[33] == "   ":
+                board[33] = currentplayer
+                break
+            elif inp == 6 and all(board[i] != "   " for i in [40, 33]) and board[26] == "   ":
+                board[26] = currentplayer
+                break
+            elif inp == 6 and all(board[i] != "   " for i in [40, 33, 26]) and board[19] == "   ":
+                board[19] = currentplayer
+                break
+            elif inp == 6 and all(board[i] != "   " for i in [40, 33, 26, 19]) and board[12] == "   ":
+                board[12] = currentplayer
+                break
+            elif inp == 6 and all(board[i] != "   " for i in [40, 33, 26, 19, 12]) and board[5] == "   ":
+                board[5] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+
+                # now comes inp == 7:
+            if inp == 7 and board[41] == "   ":
+                board[41] = currentplayer
+                break
+            elif inp == 7 and all(board[i] != "   " for i in [41]) and board[34] == "   ":
+                board[34] = currentplayer
+                break
+            elif inp == 7 and all(board[i] != "   " for i in [41, 34]) and board[27] == "   ":
+                board[27] = currentplayer
+                break
+            elif inp == 7 and all(board[i] != "   " for i in [41, 34, 27]) and board[20] == "   ":
+                board[20] = currentplayer
+                break
+            elif inp == 7 and all(board[i] != "   " for i in [41, 34, 27, 20]) and board[13] == "   ":
+                board[13] = currentplayer
+                break
+            elif inp == 7 and all(board[i] != "   " for i in [41, 34, 27, 20, 13]) and board[6] == "   ":
+                board[6] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+        else:
+            print("Oops! Try again!")
 
 
 def checkHorizontal():
