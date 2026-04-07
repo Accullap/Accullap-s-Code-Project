@@ -13,19 +13,97 @@ def printBoard():
 
 
 def playerInput():
-    #     while True:
-    #         print()
-    #         if currentplayer == " X ":
-    #             inp = int(input(f"Enter a number 1-9 Player (X): "))
-    #         else:
-    #             inp = int(input(f"Enter a number 1-9 Player (O): "))
-    #         print()
-    #         if inp >= 1 and inp <= 9 and board[inp-1] == "   ":
-    #             board[inp-1] = currentplayer
-    #             break
-    #         else:
-    #             print("Oops! Try again!\n")
-    printBoard()
+    while True:
+        print()
+        if currentplayer == " X ":
+            inp = int(input("Enter a number 1-7 Player (X): "))
+        else:
+            inp = int(input("Enter a number 1-7 Player (O): "))
+
+        if inp >= 1 and inp <= 7:
+
+            # now comes inp == 1
+            if inp == 1 and board[35] == "   ":
+                board[35] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35]) and board[28] == "   ":
+                board[28] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28]) and board[21] == "   ":
+                board[21] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21]) and board[14] == "   ":
+                board[14] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14]) and board[7] == "   ":
+                board[7] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14, 7]) and board[0] == "   ":
+                board[0] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+
+# now comes inp == 2:
+            if inp == 2 and board[36] == "   ":
+                board[36] = currentplayer
+                break
+            elif inp == 2 and all(board[i] != "   " for i in [36]) and board[29] == "   ":
+                board[29] = currentplayer
+                break
+            elif inp == 2 and all(board[i] != "   " for i in [36, 29]) and board[22] == "   ":
+                board[22] = currentplayer
+                break
+            elif inp == 2 and all(board[i] != "   " for i in [36, 29, 22]) and board[15] == "   ":
+                board[15] = currentplayer
+                break
+            elif inp == 2 and all(board[i] != "   " for i in [36, 29, 22, 15]) and board[8] == "   ":
+                board[8] = currentplayer
+                break
+            elif inp == 2 and all(board[i] != "   " for i in [36, 29, 22, 15, 8]) and board[1] == "   ":
+                board[1] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+
+# now comes inp == 3:
+            if inp == 1 and board[35] == "   ":
+                board[35] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35]) and board[28] == "   ":
+                board[28] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28]) and board[21] == "   ":
+                board[21] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21]) and board[14] == "   ":
+                board[14] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14]) and board[7] == "   ":
+                board[7] = currentplayer
+                break
+            elif inp == 1 and all(board[i] != "   " for i in [35, 28, 21, 14, 7]) and board[0] == "   ":
+                board[0] = currentplayer
+                break
+            else:
+                print("Oops! Try again!")
+
+
+# input needs to be 1-7 for every row, needs to take accout gravity, e.g. input 1 needs spot is then 35 and if input is 1 again then != 35but 28
+# def playerInput():
+#     while True:
+#         print()
+#         if currentplayer == " X ":
+#             inp = int(input(f"Enter a number 1-7 Player (X): "))
+#         else:
+#             inp = int(input(f"Enter a number 1-7 Player (O): "))
+#         print()
+#         if inp >= 1 and inp <= 7 and board[inp-1] == "   ":
+#             board[inp-1] = currentplayer
+#             break
+#         else:
+#             print("Oops! Try again!\n")
+#             printBoard()
 
 
 def checkHorizontal():
