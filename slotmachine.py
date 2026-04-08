@@ -20,10 +20,35 @@ symbol_value = {
     "C": 4,
     "D": 2,
 }
-f
 
 
-def value_slots():
+def checkwinnings(columns, lines, bet, values):
+    return
 
 
-def display():
+def get_slot_machine_spin(rows, cols, symbols):
+    return
+
+
+def print_slot_machine(columns):
+    return
+
+
+def deposit():
+    return
+
+
+def get_number_of_lines():
+    return
+
+
+def get_bet():
+    return
+
+
+def spin(balance):
+    return
+
+
+def main_gameplay():
+    return
