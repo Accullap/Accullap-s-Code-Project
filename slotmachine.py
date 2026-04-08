@@ -20,6 +20,7 @@ symbol_value = {
     "C": 4,
     "D": 2,
 }
+f
 
 
 def value_slots():
