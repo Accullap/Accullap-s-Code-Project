@@ -49,7 +49,6 @@ def get_slot_machine_spin(rows, cols, symbols):
     return columns
 
 
-
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -59,7 +58,6 @@ def print_slot_machine(columns):
                 print(column[row], end = "")
 
         print()
-
 
 
 def deposit():
@@ -92,9 +90,6 @@ def get_number_of_lines():
      return lines
 
     
-
-
-
 def get_bet():
      while True:
         amount = input("What would you like to bet on each line? €")
@@ -110,12 +105,7 @@ def get_bet():
      return amount
     
 
-
 def spin(balance):
-    return
-
-
-def main_gameplay():
     return
 
 
