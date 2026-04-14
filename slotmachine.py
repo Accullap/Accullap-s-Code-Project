@@ -128,8 +128,4 @@ def main():
     print_slot_machine(slots)
     
 
-
-
-
-
 main()
