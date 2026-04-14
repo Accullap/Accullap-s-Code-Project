@@ -1,11 +1,13 @@
 import random
 
-MAX_LINES = 3   # correlation in text with ROWS
+X = 3   # correlation: global value X makes MAX_LINES and ROWS equal for simplified changing in the size of the Slotmachine and Text
+
+MAX_LINES = X   # correlation in text with ROWS
 MIN_LINES = 1
 MAX_BET = 100
 MIN_BET = 1
 
-ROWS = 3 # correlation in text with MAX_LINES
+ROWS = X # correlation in text with MAX_LINES
 COLS = 3
 
 symbol_count = {
