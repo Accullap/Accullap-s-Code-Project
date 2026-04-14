@@ -1,11 +1,11 @@
 import random
 
-MAX_LINES = 3
+MAX_LINES = 3   # correlation in text with ROWS
 MIN_LINES = 1
 MAX_BET = 100
 MIN_BET = 1
 
-ROWS = 3
+ROWS = 3 # correlation in text with MAX_LINES
 COLS = 3
 
 symbol_count = {
@@ -50,7 +50,7 @@ def get_slot_machine_spin(rows, cols, symbols):
 
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
-        for i, column in enumerate.columns:
+        for i, column in enumerate(columns):
             if i != len(columns) - 1:
                 print(column[row], end = "|")
             else:
@@ -133,7 +133,7 @@ def main():
     print("You are betting " f"{bet}€ on {lines} lines. Total bet: {total_bet}€")
 
     slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
-    print(print_slot_machine(slots))
+    print_slot_machine(slots)
     
 
 
