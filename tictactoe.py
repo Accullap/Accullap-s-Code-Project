@@ -1,55 +1,84 @@
-import random
-
 board = ["   "] * 9
+currentplayer = " X "
+winner = None
+gamerunning = True
 
 
-def show():
+def printBoard():
     for i in range(0, 9, 3):
         print(f"{board[i]}|{board[i+1]}|{board[i+2]}")
         if i < 6:
             print("---+---+---")
 
-def player1():
-    return
 
-
-def player2():
-    return
-
-# either player 1 and player 2 seperate config or only def player()
-
-
-def check(player):
-    wins = [(0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 4, 8),
-            (2, 4, 6), (0, 3, 6), (1, 4, 7), (2, 5, 8)]
-    # check only after player 1 has made 3 moves
-
-
-
-play_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-
-
-def play():     # grid tictactoe 1,2,3,4,5,6,7,8,9;     with vertical and horizontal
+def playerInput():
     while True:
-        try:
-            number = int(input("Give me a number: "))
-            if number < 10:
-                if number <= 3:
-                    x = 0
-                elif number > 3 and number <= 6:
-                    x = 1
-                else:
-                    x = 2
-
-                y = (number - 1) % 3
-
-                print(f"number vertical: {x}")
-                print(f"number horizontal: {y}")
-            else:
-                print("only numbers from 1-9")
-        except:
-            print("only numbers allowed")
+        print()
+        if currentplayer == " X ":
+            inp = int(input(f"Enter a number 1-9 Player (X): "))
+        else:
+            inp = int(input(f"Enter a number 1-9 Player (O): "))
+        print()
+        if inp >= 1 and inp <= 9 and board[inp-1] == "   ":
+            board[inp-1] = currentplayer
+            break
+        else:
+            print("Oops! Try again!\n")
+            printBoard()
 
 
-play()
+def checkHorizontal():
+    global winner
+    if (board[0] == board[1] == board[2] and board[0] != "   ") or \
+       (board[3] == board[4] == board[5] and board[3] != "   ") or \
+       (board[6] == board[7] == board[8] and board[6] != "   "):
+        winner = currentplayer
+        return True
 
+
+def checkRow():
+    global winner
+    if (board[0] == board[3] == board[6] and board[0] != "   ") or \
+       (board[1] == board[4] == board[7] and board[1] != "   ") or \
+       (board[2] == board[5] == board[8] and board[2] != "   "):
+        winner = currentplayer
+        return True
+
+
+def checkDiagonal():
+    global winner
+    if (board[0] == board[4] == board[8] and board[0] != "   ") or \
+       (board[2] == board[4] == board[6] and board[2] != "   "):
+        winner = currentplayer
+        return True
+
+
+def checkTie():
+    global gamerunning
+    if "   " not in board:
+        printBoard()
+        print("Its a tie")
+        gamerunning = False
+
+
+def checkWin():
+    if checkDiagonal() or checkHorizontal() or checkRow():
+        print(f"The winner is {winner}\n")
+
+
+def switchPlayer():
+    global currentplayer
+    if currentplayer == " X ":
+        currentplayer = " O "
+    else:
+        currentplayer = " X "
+
+
+while gamerunning:
+    printBoard()
+    if winner != None:
+        break
+    playerInput()
+    checkWin()
+    checkTie()
+    switchPlayer()
