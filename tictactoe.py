@@ -10,11 +10,11 @@ def show():
             print("---+---+---")
 
 def player1():
-    w
+    return
 
 
 def player2():
-    w
+    return
 
 # either player 1 and player 2 seperate config or only def player()
 
