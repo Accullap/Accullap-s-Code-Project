@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from numpy import random
 
 #def quadratic(x, a):
     #return x**a
@@ -9,7 +10,7 @@ import matplotlib.pyplot as plt
 
 #x = np.linspace(-2*np.pi, 2*np.pi, 500)
 
-#for alpha in [1, -2, 3]:
+#for i in [1, -2, 3]:
     #y = np.exp(np.sin(x))*np.cos(alpha * x)**3
 
     #if alpha == 1:
@@ -19,22 +20,35 @@ import matplotlib.pyplot as plt
     #else:
         #color = "green"
 
-    #plt.plot(x, y, color=color, label=f'alpha = {alpha}', marker = "o")
+    #plt.plot(x, y, color=color, label=f'i = {i}', marker = "o")
 
 
-days = np.array([1, 2, 3, 4, 5, 6, 7])
-temp_day =   [22, 25, 19, 30, 28, 24, 21]
-temp_night = [12, 14, 10, 18, 16, 13, 11]
+#days = np.array([1, 2, 3, 4, 5, 6, 7])
+#temp_day =   [22, 25, 19, 30, 28, 24, 21]
+#temp_night = [12, 14, 10, 18, 16, 13, 11]
 
-plt.plot(days, temp_day, color='red', linestyle='--', 
-         marker='o', markersize=6, label='Day temp')
+#plt.plot(days, temp_day, color='red', linestyle='--', 
+         #marker='o', markersize=6, label='Day temp')
 
-plt.plot(days, temp_night, color='blue', 
-         marker='o', markersize=6, label='Night temp')
+#plt.plot(days, temp_night, color='blue', 
+         #marker='o', markersize=6, label='Night temp')
 
-plt.xlabel('Day')
-plt.ylabel('Temperature (°C)')
-plt.title('Temperature over one week')
-plt.legend()
-plt.grid()
-plt.show()
+#plt.xlabel('Day')
+#plt.ylabel('Temperature (°C)')
+#plt.title('Temperature over one week')
+#plt.legend(title = "Temperature")
+#plt.grid()
+#plt.show()
+
+_ = 3
+
+x = random.randint(1000, size = (3,3,3))
+
+for i in range(_):
+    for j in range(_):
+        for k in range(_):
+            if 100 < x[i][j][k] < 1000:
+                x[i][j][k] -= 100
+
+
+print(x)
