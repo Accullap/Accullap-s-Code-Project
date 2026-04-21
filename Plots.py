@@ -47,8 +47,10 @@ x = random.randint(1000, size = (3,3,3))
 for i in range(_):
     for j in range(_):
         for k in range(_):
-            if 100 < x[i][j][k] < 1000:
-                x[i][j][k] -= 100
+            if 200 < x[i][j][k] < 1000:
+                x[i][j][k] -= 200
+            else:
+                x[i][j][k] += 1000
 
 
 print(x)
