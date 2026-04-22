@@ -1,11 +1,11 @@
 import numpy as np 
 
-def add(x,y):
+def addition(x,y):
     return x+y
 
-np.add = np.frompyfunc(add, 2, 1)
+np.add = np.frompyfunc(addition, 2, 1)
 
-k = np.add([3, 4, 5],[1, 2, 3])
+k = np.addition([3, 4, 5],[1, 2, 3])
 
 
 def multiply(x,y):
