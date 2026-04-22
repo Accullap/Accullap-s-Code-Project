@@ -7,7 +7,7 @@ import numpy as np
 def addition(x,y):
     return x+y
 
-np.add = np.frompyfunc(addition, 2, 1)
+np.addition = np.frompyfunc(addition, 2, 1)
 
 k = np.addition([3, 4, 5],[1, 2, 3])
 
@@ -31,4 +31,14 @@ def subtract(x,y):
 
 np.subtract = np.frompyfunc(subtract, 2, 1)
 
-print(np.subtract(j,p))
+
+
+a = np.array([1,2,3,4,5,6,7,8,9,10, 33, 44, 55, 66, 77])
+
+newa = np.lcm.reduce(a)
+
+
+print(newa)
+
+
+
