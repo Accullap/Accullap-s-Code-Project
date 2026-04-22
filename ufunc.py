@@ -1,5 +1,9 @@
 import numpy as np 
 
+
+# kinda useless: add, subtract, divide, multiply already by default in np´s ufunc library
+
+
 def addition(x,y):
     return x+y
 
