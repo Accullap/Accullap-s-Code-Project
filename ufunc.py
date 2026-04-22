@@ -33,9 +33,10 @@ np.subtract = np.frompyfunc(subtract, 2, 1)
 
 
 
-a = np.array([1,2,3,4,5,6,7,8,9,10, 33, 44, 55, 66, 77])
+a = np.array([7,8,9,10, 33, 44, 55, 66, 77])
 
-newa = np.lcm.reduce(a)
+newa =float(np.gcd.reduce(a))
+
 
 
 print(newa)
